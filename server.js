@@ -72,4 +72,5 @@ app.post("/send", async (req,res)=>{
     }catch(e){ res.json({success:false, error:e.message}); }
 });
 
-app.listen(3000, ()=> console.log("http://localhost:3000 - /groups de lay ID"));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, ()=> console.log("Server chay port " + PORT));
